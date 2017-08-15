@@ -18,7 +18,6 @@ LOCAL_PATH := device/brcm/rpi3
 
 # Platform
 TARGET_NO_BOOTLOADER := true
-TARGET_NO_KERNEL := true
 TARGET_NO_RECOVERY := true
 
 TARGET_BOARD_PLATFORM := bcm2710
@@ -28,6 +27,15 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a53
+
+# Kernel
+TARGET_KERNEL_CONFIG := lineageos_rpi3_defconfig
+BOARD_KERNEL_IMAGE_NAME := zImage
+BOARD_KERNEL_PAGESIZE := 2048
+TARGET_KERNEL_ARCH := arm
+TARGET_KERNEL_SOURCE := kernel/brcm/rpi3
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-linux-gnueabihf-4.9/bin
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-gnueabihf-
 
 # Audio
 USE_XML_AUDIO_POLICY_CONF := 1
