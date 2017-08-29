@@ -34,6 +34,12 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:system/etc/audio_policy_volumes.xml \
     $(LOCAL_PATH)/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    libbt-vendor \
+    android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service
+
 # Graphics
 PRODUCT_PACKAGES += \
     libGLES_mesa \
