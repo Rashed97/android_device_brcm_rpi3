@@ -22,6 +22,11 @@ PRODUCT_PACKAGES += \
     audio.primary.rpi3 \
     audio.usb.default
 
+# Audio HALs
+PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio@2.0-service
+
 # Audio configs
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/etc/usb_audio_policy_configuration.xml \
@@ -34,6 +39,17 @@ PRODUCT_PACKAGES += \
     libGLES_mesa \
     gralloc.rpi3 \
     hwcomposer.rpi3
+
+# Graphics HALs
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.composer@2.1-service \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.mapper@2.0-service \
+    android.hardware.memtrack@1.0-service \
+    android.hardware.memtrack@1.0-impl
 
 # Keylayout
 PRODUCT_COPY_FILES += \
